@@ -4,6 +4,7 @@ def main():
     num_list = get_user_input()
     average = calculate_average(num_list)
     max_min = large_small(num_list)
+    median = func_median(num_list)
 
 def display_main_menu():
     print("display_main_menu")
@@ -25,5 +26,14 @@ def large_small(numlist):
     print("The maximum value is ", max(numlist))
     print("The minimum value is ", min(numlist))
 
+
+def func_median(numlist):
+    numlist.sort()
+    if(len(numlist)%2==0):
+        x = int(len(numlist)/2)
+        print((numlist[x] + numlist[x-1])/2)
+    else:
+        x = int((len(numlist)+1)/2)
+        print((numlist[x-1]))
 if __name__ == "__main__":
     main()
