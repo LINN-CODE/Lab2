@@ -25,7 +25,7 @@ def calculate_average(numlist):
 def large_small(numlist):
     print("The maximum value is ", max(numlist))
     print("The minimum value is ", min(numlist))
-
+    return([min(numlist),max(numlist)])
 
 def func_median(numlist):
     numlist.sort()
